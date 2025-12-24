@@ -102,11 +102,9 @@ export default function Dashboard() {
             <Card className="bg-card/50 backdrop-blur-xl border-border/50 border-dashed">
               <CardContent className="py-12 text-center">
                 <p className="text-muted-foreground mb-4">No tasks yet. Let's get started!</p>
-                <Link to="/tasks">
-                  <Button variant="outline">
-                    Add your first task
-                  </Button>
-                </Link>
+                <Button variant="outline" asChild>
+                  <Link to="/tasks">Add your first task</Link>
+                </Button>
               </CardContent>
             </Card>
           ) : (
@@ -127,12 +125,12 @@ export default function Dashboard() {
                 </Card>
               ))}
               {activeQuests.length > 3 && (
-                <Link to="/tasks">
-                  <Button variant="ghost" className="w-full">
+                <Button variant="ghost" className="w-full" asChild>
+                  <Link to="/tasks">
                     View all {activeQuests.length} tasks
                     <ArrowRight className="h-4 w-4 ml-2" />
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               )}
             </div>
           )}
