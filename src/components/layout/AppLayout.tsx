@@ -42,15 +42,17 @@ function NavContent({ onClose }: { onClose?: () => void }) {
         {navItems.map(({ to, icon: Icon, label }) => {
           const isActive = location.pathname === to;
           return (
-            <Link key={to} to={to} onClick={onClose}>
-              <Button 
-                variant={isActive ? 'secondary' : 'ghost'} 
-                className={`w-full justify-start gap-3 h-11 ${isActive ? 'bg-primary/10 text-primary' : ''}`}
-              >
+            <Button
+              key={to}
+              asChild
+              variant={isActive ? 'secondary' : 'ghost'}
+              className={`w-full justify-start gap-3 h-11 ${isActive ? 'bg-primary/10 text-primary' : ''}`}
+            >
+              <Link to={to} onClick={onClose}>
                 <Icon className="h-5 w-5" />
                 {label}
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           );
         })}
       </nav>
