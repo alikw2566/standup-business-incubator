@@ -22,15 +22,15 @@ export default function Landing() {
         </div>
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <Link to="/auth">
-            <Button variant="ghost">Sign In</Button>
-          </Link>
-          <Link to="/auth">
-            <Button className="shadow-lg shadow-primary/25">
+          <Button variant="ghost" asChild>
+            <Link to="/auth">Sign In</Link>
+          </Button>
+          <Button className="shadow-lg shadow-primary/25" asChild>
+            <Link to="/auth">
               Get Started
               <ArrowRight className="h-4 w-4 ml-2" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </header>
 
@@ -53,12 +53,12 @@ export default function Landing() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/auth">
-              <Button size="lg" className="text-lg px-8 py-6 shadow-xl shadow-primary/30">
+            <Button size="lg" className="text-lg px-8 py-6 shadow-xl shadow-primary/30" asChild>
+              <Link to="/auth">
                 Start Building Today
                 <ArrowRight className="h-5 w-5 ml-2" />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
 
