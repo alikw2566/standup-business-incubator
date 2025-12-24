@@ -25,8 +25,8 @@ export default function Landing() {
           <Button variant="ghost" asChild>
             <Link to="/auth">Sign In</Link>
           </Button>
-          <Button className="shadow-lg shadow-primary/25" asChild>
-            <Link to="/auth">
+          <Button className="shadow-lg shadow-primary/25 hover-scale" asChild>
+            <Link to="/auth?mode=signup">
               Get Started
               <ArrowRight className="h-4 w-4 ml-2" />
             </Link>
@@ -37,24 +37,24 @@ export default function Landing() {
       {/* Hero Section */}
       <main className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-32">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8 backdrop-blur-sm animate-fade-in">
             <Sparkles className="h-4 w-4" />
             Your AI-Powered Business Operating System
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 tracking-tight animate-fade-in [animation-delay:100ms]">
             Build Faster with Your{' '}
             <span className="text-primary">AI Co-Founder</span>
           </h1>
           
-          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto animate-fade-in [animation-delay:200ms]">
             Stop grinding alone. StandUp gives you an AI business partner that remembers everything, 
             helps you prioritize, and keeps you accountable every single day.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="text-lg px-8 py-6 shadow-xl shadow-primary/30" asChild>
-              <Link to="/auth">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in [animation-delay:300ms]">
+            <Button size="lg" className="text-lg px-8 py-6 shadow-xl shadow-primary/30 hover-scale" asChild>
+              <Link to="/auth?mode=signup">
                 Start Building Today
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Link>
@@ -65,7 +65,7 @@ export default function Landing() {
         {/* Feature Cards */}
         <div className="grid md:grid-cols-2 gap-6 mt-32 max-w-4xl mx-auto">
           {/* AI Co-Founder Card */}
-          <div className="group relative p-8 rounded-2xl bg-card/50 backdrop-blur-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
+          <div className="group relative p-8 rounded-2xl bg-card/50 backdrop-blur-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 animate-fade-in [animation-delay:400ms] hover-scale">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative">
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 mb-6">
@@ -80,7 +80,7 @@ export default function Landing() {
           </div>
 
           {/* Task Management Card */}
-          <div className="group relative p-8 rounded-2xl bg-card/50 backdrop-blur-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5">
+          <div className="group relative p-8 rounded-2xl bg-card/50 backdrop-blur-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 animate-fade-in [animation-delay:500ms] hover-scale">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative">
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 mb-6">
